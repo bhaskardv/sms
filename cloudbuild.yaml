@@ -1,0 +1,11 @@
+
+steps:
+- name: gcr.io/cloud-builders/git
+  args: ['clone', 'https://github.com/bhaskardv/sms.git']
+- name: 'gcr.io/cloud-builders/java/mvn'
+  args: ['package']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["build", "-t", "gcr.io/$PROJECT_ID/sms:$REVISION_ID", "-t", "gcr.io/$PROJECT_ID/sms:latest", "-f", "Dockerfile", "."]
+images:
+  - 'gcr.io/$PROJECT_ID/sms:$REVISION_ID'
+  - 'gcr.io/$PROJECT_ID/sms:latest'

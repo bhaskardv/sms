@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+  <div th:fragment="sidebar">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+
+        <li class="active"><a href="/sms/dashboard" th:href="@{/sms/dashboard}"><span
+            class="fa-stack fa-lg pull-left"><i
+              class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a>
+        </li>
+        <li><a href="/sms/services" th:href="@{/sms/services}"><span class="fa-stack fa-lg pull-left"><i
+              class="fa fa-wrench fa-stack-1x "></i></span>Services</a></li>
+        <li><a href="/sms/about" th:href="@{/sms/about}"><span class="fa-stack fa-lg pull-left"><i
+              class="fa fa-youtube-play fa-stack-1x "></i></span>About</a></li>              
+        <li><a href="/sms/contact" th:href="@{/sms/contact}"><span class="fa-stack fa-lg pull-left"><i
+              class="fa fa-server fa-stack-1x "></i></span>Contact</a></li>
+      </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+  </div>
+</body>
+</html>
